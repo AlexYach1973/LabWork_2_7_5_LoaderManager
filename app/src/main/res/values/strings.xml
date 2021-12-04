@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LabWork 2.7.5</string>
+    <string name="contacts">Загрузка контактов</string>
+    <string name="cursorloader">Используем CursorLoader</string>
+</resources>
