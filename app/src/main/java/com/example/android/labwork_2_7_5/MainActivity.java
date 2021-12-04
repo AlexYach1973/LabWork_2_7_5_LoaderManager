@@ -95,9 +95,9 @@ public class MainActivity extends AppCompatActivity
             // _ID
             int id = data.getInt(data.getColumnIndex(ContactsContract.Contacts._ID));
 
+            // Telephone
             @SuppressLint("Recycle") Cursor cursor = getContentResolver().query(
-                    ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-                    null,
+                    ContactsContract.CommonDataKinds.Phone.CONTENT_URI,null,
                     ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=" +
                             id, null, null);
             while (cursor.moveToNext()) {
@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity
             }
             list.add(list_data);
         }
+
         MyAdapter adapter = new MyAdapter(context, list);
         listContact.setAdapter(adapter);
 
